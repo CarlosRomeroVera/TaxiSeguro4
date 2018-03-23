@@ -40,8 +40,6 @@ myApp.onPageInit('ViajesIndex', function(page) {
         
     }
      
-     
-     
     function setMapa (coords)
     {  
         //alert('dibujando mapa');
@@ -669,6 +667,35 @@ myApp.onPageInit('ViajesIndex', function(page) {
           });
     }
 
+    // function verificaEstado(){
+    //   $.ajax({
+    //       type: "POST", 
+    //       url:  window.server + "viajes/verificar_estado.php",
+    //       data: ({
+    //           pasajero_id : window.user_id_global,
+    //       }),
+        
+    //       cache: false,
+    //       dataType: "text",
+    //       success: function(data){
+    //         if (data != 'Error') {
+    //           alert(data);
+    //           //clearInterval(interval);
+    //           //asignacion(data);
+    //           //interval = setInterval(asignacion(data), 5000);
+    //           // obtenerChofer();
+    //         }else{
+    //           // solicita();
+    //         }
+    //       }
+    //   }).fail( function() {
+
+    //       //alert( 'Comprueba tu conexión a internet e intenta de nuevo' );
+    //       myApp.alert('Comprueba tu conexión a internet', '¡Atención!');
+    //       // solicita();
+    //   });//fin de ajax
+    // }
+
     $(function() {
         $( "#SolicitarViaje" ).prop( "disabled", true );
         //$("#SolicitarViaje").attr("disabled", true);
@@ -935,6 +962,7 @@ myApp.onPageInit('ViajesIndex', function(page) {
             };
         
     });//fin de clic solicitar
-
+    
+    // verificaEstado();
     initMap();
 });
